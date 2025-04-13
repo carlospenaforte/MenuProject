@@ -36,7 +36,8 @@ namespace MenuProject.Data
                 new Ingredient { Id = 2, Name = "Mozzarella" });
 
             modelBuilder.Entity<DishIngredient>().HasData(
-                new DishIngredient{ DishId = 1, IngredientId = 1, Id = 1, });
+                new DishIngredient{ DishId = 1, IngredientId = 1 },
+                new DishIngredient { DishId = 2, IngredientId = 2});
 
 
             base.OnModelCreating(modelBuilder);
