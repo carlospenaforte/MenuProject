@@ -14,10 +14,7 @@ namespace MenuProject.Data
         {
             modelBuilder.Entity<DishIngredient>()
                 .HasKey(di => new
-                {
-                    di.DishId,
-                    di.IngredientId
-                });
+                { di.DishId, di.IngredientId });
 
             modelBuilder.Entity<DishIngredient>().HasOne(d => d.Dish)
                 .WithMany(di => di.DishIngredients)
@@ -29,7 +26,7 @@ namespace MenuProject.Data
 
 
             modelBuilder.Entity<Dish>().HasData(
-                new Dish { Id = 1, Name = "Margherita", ImageUrl = "", Price = 10.99 });
+                new Dish { Id = 1, Name = "Margherita", ImageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSN8GeAtB9n7it8mS7J4zIbtQvXQcLy1gjEQ&s", Price = 10.99 });
 
             modelBuilder.Entity<Ingredient>().HasData(
                 new Ingredient { Id = 1, Name = "Tomato Sauce" },
